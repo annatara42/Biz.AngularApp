@@ -1,0 +1,36 @@
+<mat-dialog-content>
+    {{message}}
+    <div>
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+                <!-- <button mat-raised-button mat-dialog-close tabindex="-1"> -->
+                <!-- <img src="https://img.icons8.com/color/48/000000/amazon-web-services.png" /> -->
+                <!-- <input type="image" name="imgbtn" src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="Tool Tip"> -->
+                <a (click)="getSelectedSource('aws')"><img title="AWS Bucket" src="https://img.icons8.com/color/48/000000/amazon-web-services.png" alt="" /></a>
+                <!-- </button> -->
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <!-- <button mat-raised-button color="accent" mat-dialog-close tabindex="-1">GCP</button> -->
+                <!-- <img src="https://img.icons8.com/color/48/000000/google-cloud-platform.png" /> -->
+                <a (click)="getSelectedSource('gcp')"><img title="Google Cloud Bucket" src="https://img.icons8.com/color/48/000000/google-cloud-platform.png" alt="" /></a>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <!-- <button mat-raised-button color="warn" mat-dialog-close tabindex="-1">GCP</button> -->
+                <a (click)="getSelectedSource('azure')"><img title="Azure Blob Bucket" src="https://img.icons8.com/color/48/000000/azure-1.png" alt="" /></a>
+                <!-- <img src="https://img.icons8.com/color/48/000000/azure-1.png" /> -->
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <!-- <button mat-raised-button mat-dialog-close tabindex="-1">Diva</button> -->
+                <a (click)="getSelectedSource('diva')"><img title="Diva Storage" src="https://img.icons8.com/fluent/48/000000/cloud.png" alt="" /></a>
+                <!-- <img src="https://img.icons8.com/fluent/48/000000/cloud.png" /> -->
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
+</mat-dialog-content>
+<!-- <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Close</button>
+    <button mat-button [mat-dialog-close]="data.selectedSource" cdkFocusInitial>Ok</button> 
+</div> -->
+<!-- <mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" mat-dialog-close tabindex="-1">{{cancelButtonText}}</button>
+</mat-dialog-actions> -->

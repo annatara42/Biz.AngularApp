@@ -1,0 +1,103 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="example-app-name"> VMS Storage Explorer</h1>
+</mat-toolbar>
+<ng-container>
+    <mat-form-field class="search-form">
+        <input matInput placeholder="Search File" type="text">
+    </mat-form-field>&nbsp;
+    <button button="submit" mat-raised-button color="primary">Search</button>
+    <br>
+    <div class="flexcontainer">
+        <div class="left-half">
+            <tree-view></tree-view>
+        </div>
+        <div class="right-half">
+            <app-folder-explorer [fileElements]="fileElements | async" [path]="currentPath" [canNavigateUp]="canNavigateUp" (navigatedDown)="navigateToFolder($event)" (navigatedUp)="navigateUp()"></app-folder-explorer>
+        </div>
+    </div>
+</ng-container>
+
+
+<!-- <div style="padding: 20px;">
+
+    <h1>Select Sources</h1>
+
+    <div style="padding: 20px">
+
+        <mat-form-field>
+            <mat-select name="sourceVariable" placeholder="Select">
+                <mat-option *ngFor="let source of sources" [value]="source.short">
+                    {{source.full}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        &nbsp;&nbsp; Selected = {{selectedSource}}
+    </div>
+</div> -->
+
+<!-- <div>
+    <h1>Home</h1>
+    <p>{{bodyText}}</p>
+    <button (click)="openModal('custom-modal-1')">Open Modal 1</button>
+    <button (click)="openModal('custom-modal-2')">Open Modal 2</button>
+</div>
+
+<vms-modal id="custom-modal-1">
+    <h1>A Custom Modal!</h1>
+    <p>Home page text: <input type="text" [(ngModel)]="bodyText" /></p>
+    <button (click)="closeModal('custom-modal-1');">Close</button>
+</vms-modal>
+
+<vms-modal id="custom-modal-2">
+    <h1 style="height:1000px">A Tall Custom Modal!</h1>
+    <button (click)="closeModal('custom-modal-2');">Close</button>
+</vms-modal> -->
+
+<!-- <div style="padding:10px;margin:10px">
+    <button mat-raised-button color="accent" tabindex="-1" (click)="openSelection()">Open Library Source</button>
+</div>
+<br>
+
+<mat-accordion *ngIf="selectedSource">
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{selectedSource | uppercase}} --
+                <p><b> Storage Location</b></p>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+    </mat-expansion-panel>
+</mat-accordion> -->
+<!-- <li *ngIf="selectedSource">
+    You chose: <i>{{selectedSource}}</i>
+</li> -->
+
+
+<!-- <div>
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>AWS</mat-grid-tile>
+        <mat-grid-tile>GCP</mat-grid-tile>
+        <mat-grid-tile>Premise</mat-grid-tile>
+        <mat-grid-tile>Diva</mat-grid-tile>
+    </mat-grid-list>
+</div> -->
+
+
+<!-- <mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+
+            <tree-view></tree-view>
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 88vh;">
+
+            <p>Launcher works</p>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container> -->
